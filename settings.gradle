@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url "https://api.xposed.info/" }
     }
 }
-rootProject.name = "Xposed-Module-Basic-Template"
+rootProject.name = "NativeHookExample"
 include ':app'

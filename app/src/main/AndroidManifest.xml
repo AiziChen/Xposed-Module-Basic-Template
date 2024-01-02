@@ -9,17 +9,22 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XposedModuleBasicTemplate"
+        android:theme="@style/Theme.NativeHookExample"
+        android:multiArch="true"
+        android:extractNativeLibs="false"
         tools:targetApi="31">
         <meta-data
             android:name="xposedmodule"
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="Xposed Description" />
+            android:value="NativeHookExample" />
         <meta-data
             android:name="xposedminversion"
-            android:value="53" />
+            android:value="82" />
+        <meta-data
+            android:name="xposedscope"
+            android:value="com.cozz.hellojni" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
