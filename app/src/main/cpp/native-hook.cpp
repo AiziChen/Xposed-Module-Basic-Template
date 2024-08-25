@@ -11,7 +11,7 @@ static HookFunType hook_func = nullptr;
 
 static void on_library_loaded(const char *name, void *handle) {
     __android_log_print(ANDROID_LOG_DEBUG, TAG, "Library %s loaded at %p", name, handle);
-    if (std::string(name).ends_with("hellojni.so")) {
+    if (std::string(name).ends_with("libapp.so")) {
         void *faddr = dlsym(handle, "_Z4infoPKc");
         hookf_info(hook_func, name, faddr);
     }
